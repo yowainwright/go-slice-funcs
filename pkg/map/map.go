@@ -1,12 +1,10 @@
-package map
-
-import "fmt"
+package slice_map
 
 // A Slice Mapping Function for Generic types
-func Map (data []T, f func(T) T) []T {
-		result := make([]T, len(data))
-		for i, v := range data {
-				result[i] = f(v)
-		}
-		return result
+func SliceMap[T any](data []T, f func(T) T) []T {
+	result := make([]T, len(data))
+	for i, v := range data {
+		result[i] = f(v)
+	}
+	return result
 }
