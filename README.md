@@ -46,13 +46,30 @@ Each function is built to mimic the native JS function within Go Lang constraint
 
 > `SliceMap[T any](data []T, f func(T) T) []T`
 
-It takes in a generic slice and a function to run operations on each element of the slice, returning a new slice with the result.
+It takes in a generic slice and a function to run operations on each element of the slice, returning a new slice with the mapped result.
 
 ```go
 SliceMap([]string{"a", "b", "c"}, func(s string) string {
     return s + "!"
 })
 // => ["a!", "b!", "c!"]
+```
+
+---
+
+### `SliceFilter`
+
+`SliceFilter` is similar to `Array.prototype.filter` in JavaScript.
+
+> `SliceFilter[T any](data []T, f func(T) bool) []T`
+
+It takes in a generic slice and a function to run operations on each element of the slice, returning a new slice with the filtered result.
+
+```go
+SliceFilter([]string{"a", "b", "c", "a"}, func(s string) bool {
+    return s == "a"
+})
+// => ["a", "a"]
 ```
 
 ---
