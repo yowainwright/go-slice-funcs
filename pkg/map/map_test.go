@@ -16,8 +16,7 @@ func addNumber(num int) int {
 
 func updateObject(obj map[string]string) map[string]string {
 	obj["name"] = "Jeff"
-	newObj := make(map[string]string)
-	newObj = obj
+	var newObj = obj
 	newObj["fullName"] = obj["name"] + " " + obj["lastName"]
 	return newObj
 }
