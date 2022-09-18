@@ -96,5 +96,6 @@ pre-commit install
   - Commit linting, etc
   - Github config files
 
+---
 
 Made by [@yowainwright](https://github.com/yowainwright), MIT 2022
