@@ -74,4 +74,27 @@ SliceFilter([]string{"a", "b", "c", "a"}, func(s string) bool {
 
 ---
 
+## Development
+
+setup
+```sh
+go mod init github.com/yowainwright/go-slice-funcs
+```
+
+setup pre-commit
+```sh
+# install pre-commit
+# https://pre-commit.com/
+pre-commit install
+```
+---
+
+## Roadmap
+
+- Complete all/most of the JS Array Prototype functions
+- Add more config
+  - Commit linting, etc
+  - Github config files
+
+
 Made by [@yowainwright](https://github.com/yowainwright), MIT 2022
