@@ -72,6 +72,17 @@ SliceFilter([]string{"a", "b", "c", "a"}, func(s string) bool {
 // => ["a", "a"]
 ```
 
+### `SliceFind`
+
+`SliceFind` is similar to `Array.prototype.find` in JavaScript.
+
+> `SliceFind[T any](data []T, f func(T) bool) T`
+
+```go
+SliceFind([]string{"a", "b", "c", "a"}, func(s string) bool {
+    return s == "a"
+})
+// => "a"
 ---
 
 ## Development
@@ -93,7 +104,6 @@ pre-commit install
 
 - Complete all/most of the JS Array Prototype functions
 - Add more config
-  - Commit linting, etc
   - Github config files
 
 ---
