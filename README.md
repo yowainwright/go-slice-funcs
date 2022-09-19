@@ -72,6 +72,8 @@ SliceFilter([]string{"a", "b", "c", "a"}, func(s string) bool {
 // => ["a", "a"]
 ```
 
+---
+
 ### `SliceFind`
 
 `SliceFind` is similar to `Array.prototype.find` in JavaScript.
