@@ -85,6 +85,23 @@ SliceFind([]string{"a", "b", "c", "a"}, func(s string) bool {
     return s == "a"
 })
 // => "a"
+```
+
+---
+
+### `SliceReduce`
+
+`SliceReduce` is similar to `Array.prototype.reduce` in JavaScript.
+
+> `SliceReduce[T any](data []T, f func(T, T) T) T`
+
+```go
+SliceReduce([]string{"a", "b", "c"}, func(a, b string) string {
+    return a + b
+})
+// => "abc"
+```
+
 ---
 
 ## Development
