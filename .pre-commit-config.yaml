@@ -3,6 +3,5 @@ repos:
   rev: v0.5.0
   hooks:
     - id: go-fmt
-    - id: go-vet
     - id: go-lint
     - id: go-unit-tests

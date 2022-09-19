@@ -1,4 +1,4 @@
-package slice_filter
+package slicefilter
 
 import (
 	"testing"
