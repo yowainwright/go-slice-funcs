@@ -1,4 +1,4 @@
-package slice_map
+package slicemap
 
 import (
 	"testing"

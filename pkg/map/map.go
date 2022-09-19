@@ -1,6 +1,6 @@
-package slice_map
+package slicemap
 
-// A Slice Mapping Function for Generic types
+// SliceMap Mapping Function for Generic types
 func SliceMap[T any](data []T, f func(T) T) []T {
 	result := make([]T, len(data))
 	for i, v := range data {

@@ -1,6 +1,6 @@
-package slice_filter
+package slicefilter
 
-// A Slice Filter Function for Generic types
+// SliceFilter Function for Generic types
 func SliceFilter[T any](data []T, f func(T) bool) []T {
 	result := make([]T, 0, len(data))
 	for _, v := range data {
