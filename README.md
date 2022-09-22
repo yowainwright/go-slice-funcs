@@ -104,6 +104,23 @@ SliceReduce([]string{"a", "b", "c"}, func(a, b string) string {
 
 ---
 
+### `SliceForEach`
+
+`SliceForEach` is similar to `Array.prototype.forEach` in JavaScript.
+
+> `SliceForEach[T any](data []T, f func(T))`
+
+```go
+var word = ""
+SliceForEach([]string{"a", "b", "c"}, func(s string) {
+    word += s
+    return
+})
+// word => "abc"
+```
+
+---
+
 ## Development
 
 setup
