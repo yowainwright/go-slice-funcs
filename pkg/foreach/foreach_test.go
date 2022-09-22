@@ -11,12 +11,10 @@ var word = ""
 
 func addNumber(num int) {
 	val = num + val
-	return
 }
 
 func addLetter(str string) {
 	word = word + str
-	return
 }
 
 func TestSliceForEachWithNumber(t *testing.T) {
