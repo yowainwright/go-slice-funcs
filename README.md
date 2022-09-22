@@ -116,6 +116,7 @@ SliceForEach([]string{"a", "b", "c"}, func(s string) {
     word += s
     return
 })
+// word => "abc"
 ```
 
 ---
