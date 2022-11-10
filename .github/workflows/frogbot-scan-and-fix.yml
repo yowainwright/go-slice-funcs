@@ -20,23 +20,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      # Install prerequisites - uncomment the relevant one
-
-      # - uses: actions/setup-go@v3
-      #   with:
-      #     go-version: 1.17.x
-
-      # - uses: actions/setup-java@v3
-      #    with:
-      #      java-version: "11"
-      #      distribution: "temurin"
-
-      # - uses: actions/setup-node@v3
-      #    with:
-      #      node-version: "16.x"
-
-
       - uses: jfrog/frogbot@9304d3b1d8e05a1b5fc0ba9ebf9ffbd495386250
         env:
           # [Mandatory]
