@@ -33,7 +33,3 @@ jobs:
           # [Mandatory]
           # The GitHub token automatically generated for the job
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-          # [Mandatory if using npm]
-          # The command that installs the dependencies
-          # JF_INSTALL_DEPS_CMD: "npm i"
