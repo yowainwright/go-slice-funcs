@@ -3,7 +3,6 @@ name: update
 on:
   schedule:
     - cron:  '0 5 * * 1'
-    # - cron: '*/5 * * * *'
 
 jobs:
 
@@ -15,11 +14,11 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v3
       with:
-        go-version: 1.19
-        
+        go-version: 1.20
+
     - name: Update
       run: go get -u ./...
-      
+
     - name: Verify dependencies
       run: go mod verify
 
@@ -34,16 +33,16 @@ jobs:
 
     - name: Test
       run: go test -v ./...
-      
+
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v4
       with:
           token: ${{ secrets.PR_CREATE_TOKEN }}
           commit-message: Update dependencies
-          title: "[Codependence]  update dependencies"
+          title: "[Dependencies]  update dependencies"
           body: |
             ## Dependency updates
-            Auto-generated using [create-pull-request][2]
-            [2]: https://github.com/peter-evans/create-pull-request
+            Auto-generated using [create-pull-request][1]
+            [1]: https://github.com/peter-evans/create-pull-request
           branch: update-dependencies
           labels: dependencies
