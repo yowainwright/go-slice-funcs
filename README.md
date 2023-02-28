@@ -119,21 +119,40 @@ SliceForEach([]string{"a", "b", "c"}, func(s string) {
 // word => "abc"
 ```
 
+### `SliceIncludes`
+
+`SliceIncludes` is similar to `Array.prototype.includes` in JavaScript.
+
+> `SliceIncludes[T any](data []T, f func(T) bool) bool`
+
+```go
+SliceIncludes([]string{"a", "b", "c"}, func(s string) bool {
+    return s == "a"
+})
+// => true
+```
+
 ---
 
 ## Development
 
 setup
 ```sh
-go mod init github.com/yowainwright/go-slice-funcs
+.bin/setup.sh
+# sets up brew, go, and pre-commit
 ```
 
-setup pre-commit
+setup for coding
 ```sh
-# install pre-commit
-# https://pre-commit.com/
-pre-commit install
+go get ./... && go mod tidy && go mod vendor
 ```
+
+running unit tests
+```sh
+go test ./...
+```
+
+
 ---
 
 ## Roadmap
